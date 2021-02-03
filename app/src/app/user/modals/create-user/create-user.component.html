@@ -1,0 +1,140 @@
+<div mat-dialog-content>
+  <h1 mat-dialog-title>
+    <mat-icon
+      class="text-gray"
+      aria-hidden="false"
+      aria-label="Add"
+      style="vertical-align: middle"
+      >add_circle</mat-icon
+    ><span class="text-gray ml-2">Nuevo usuario</span>
+  </h1>
+  <form [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Codigo</mat-label>
+      <input matInput formControlName="code" />
+      <mat-error *ngIf="formCreate.get('code').hasError('required')">
+        Campo requerido
+      </mat-error>
+
+      <mat-error *ngIf="formCreate.get('code').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="formCreate.get('name').hasError('required')">
+        Campo requerido
+      </mat-error>
+
+      <mat-error *ngIf="formCreate.get('name').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label> Direccion </mat-label>
+      <input matInput formControlName="address" />
+      <mat-error *ngIf="formCreate.get('address').hasError('required')">
+        Dirección es Requerida
+      </mat-error>
+      <mat-error *ngIf="formCreate.get('address').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Poblacion</mat-label>
+      <input matInput formControlName="population" />
+      <mat-error *ngIf="formCreate.get('population').hasError('required')">
+        Campo requerido
+      </mat-error>
+
+      <mat-error *ngIf="formCreate.get('population').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Codigo Postal</mat-label>
+      <input matInput formControlName="postal_code" />
+      <mat-error *ngIf="formCreate.get('postal_code').hasError('required')">
+        Campo requerido
+      </mat-error>
+
+      <mat-error *ngIf="formCreate.get('postal_code').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Ciudad</mat-label>
+      <input matInput formControlName="city" />
+      <mat-error *ngIf="formCreate.get('city').hasError('required')">
+        Campo requerido
+      </mat-error>
+
+      <mat-error *ngIf="formCreate.get('city').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field> 
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+      <mat-error *ngIf="formCreate.get('email').hasError('required')">
+        Email es Requerido
+      </mat-error>
+      <mat-error *ngIf="formCreate.get('email').hasError('email')">
+        Email no válido
+      </mat-error>
+      <mat-error *ngIf="formCreate.get('email').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-12 col-md-6">
+      <mat-label> Telefono </mat-label>
+      <input
+        matInput
+        formControlName="phone"
+        
+      />
+      <mat-error *ngIf="formCreate.get('phone').hasError('required')">
+        Teléfono es Requerido
+      </mat-error>
+      <mat-error *ngIf="formCreate.get('phone').hasError('pattern')">
+        Formato inválido
+      </mat-error>
+      <mat-error *ngIf="formCreate.get('phone').hasError('maxlength')">
+        Limite de caracteres 
+      </mat-error>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="warn" type="button" (click)="close()">
+        <mat-icon
+          title="Cancelar"
+          class="text-white"
+          aria-hidden="false"
+          aria-label="Cancel"
+        >
+          cancel
+        </mat-icon>
+        Cancelar
+      </button>
+      <button mat-raised-button color="primary">
+        <mat-icon
+          title="Guardar"
+          class="text-white"
+          aria-hidden="false"
+          aria-label="Save"
+        >
+          save
+        </mat-icon>
+        Guardar
+      </button>
+      <br /><br /><br />
+    </div>
+  </form>
+</div>
