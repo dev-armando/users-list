@@ -1,29 +1,44 @@
-# Work Test
+# Users List
 
-## Paso 1:
+[![Linkedin Badge](https://img.shields.io/badge/-rojasarmando-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rojasarmando/)](https://www.linkedin.com/in/rojasarmando/)
+[![Gmail Badge](https://img.shields.io/badge/-armando.develop@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:armando.develop@gmail.com)](mailto:armando.develop@gmail.com)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-cd backend/
+- Angular 11
+- Angular Material
 
-## Paso 2 
+<br> <br>
+<img src="img/img2.png">
 
-npm install
+<br> <br>
+<img src="img/img1.png">
 
-## Paso 3 
+## Install
 
-npm run build
+### Step 1:
 
-## Paso 4 
+`cd backend/`
 
-npm start
+### Step 2
 
-## Paso 5 
+`npm install`
 
-cd ../app
+### Step 3
 
-## Paso 6 
+`npm run build`
 
-npm install 
+### Step 4
 
-## Paso 7 
+`npm start`
 
-ng serve 
+### Step 5
+
+`cd ../app`
+
+### Step 6
+
+`npm install`
+
+### Step 7
+
+`ng serve`
